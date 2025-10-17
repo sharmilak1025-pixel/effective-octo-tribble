@@ -5,7 +5,7 @@
     "colab": {
       "provenance": [],
       "name": "sentiment.py",
-      "authorship_tag": "ABX9TyMEr46QnQ8wjTT7XclGWRjC",
+      "authorship_tag": "ABX9TyMu8U/Viepla2dDnLMzVXWZ",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -29,7 +29,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 3,
+      "execution_count": null,
       "metadata": {
         "id": "M-0iHp2l-Zaa",
         "outputId": "8a258a31-b97c-4bd0-dc5b-58c50d009532",
@@ -63,7 +63,8 @@
         "if __name__ == \"__main__\":\n",
         "    sample = \"The product works as expected. Nothing extraordinary.\"\n",
         "    print(\"Input:\", sample)\n",
-        "    print(\"Sentiment:\", analyze_sentiment(sample))\n"
+        "    print(\"Sentiment:\", analyze_sentiment(sample))\n",
+        "    print(\"Sharmila\")\n"
       ]
     }
   ]
