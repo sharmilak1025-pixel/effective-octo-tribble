@@ -1,0 +1,34 @@
+name: NLP Sentiment Analysis CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install textblob
+
+    - name: Run sentiment analysis test
+      run: |
+        echo "I love this product!" > input.txt
+        python -c "
+from textblob import TextBlob
+text = open('input.txt').read()
+blob = TextBlob(text)
+print('Sentiment:', 'Positive' if blob.sentiment.polarity > 0 else 'Negative' if blob.sentiment.polarity < 0 else 'Neutral')
+        "
